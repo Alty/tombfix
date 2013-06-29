@@ -1,13 +1,14 @@
 /**
 	* tombfix.service.extractors.feedeen - PatchFor Tombfix
 	* Feedeen上でTombfixを使えるようにするTombfix用パッチ
-	
+	*
 	* 参考：Tombloo/chrome/content/library/31_Tombloo.Service.extractors.js、GoogleReader部分
 	* @version 0.01
 	* @date 2013-06-29
-    * @author Alty <fujihisa@gmail.com>
+	* @author Alty <fujihisa@gmail.com>
 	* @license Same as Tombloo, Tomblfy
-*/
+	* @updateURL https://github.com/Alty/tombfix/blob/master/tombfix.extractor.feedeen.js
+**/
 
 // Feedeen記事取得用
 (function(undefined) {
