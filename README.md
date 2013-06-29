@@ -6,9 +6,9 @@ Firefox用アドオン[Tombfix](https://github.com/tombfix/core "Tombfix")のパ
 
 ファイルビュー画面右上にあるRAWを右クリックし、Tombfix→mbパッチのインストール と選べばインストールできます。
 
-# 概要
+# パッチ概要
 
 * [tombfix.extractor.feedeen.js](https://github.com/Alty/tombfix/blob/master/tombfix.extractor.feedeen.js "tombfix.extractor.feedeen.js")
 
-    * Tombfixをフィードリーダー「[Feedeen](http://feedeen.com "Feedeen")」に対応させるパッチです。
-    * Googleリーダー上で出来たことがそのままできます。
+    * [Tombfix](https://github.com/tombfix/core "Tombfix")をフィードリーダー「[Feedeen](http://feedeen.com "Feedeen")」に対応させるパッチです。
+    * Googleリーダー上でTombfix(Tombloo)が出来たことがそのままできます。
