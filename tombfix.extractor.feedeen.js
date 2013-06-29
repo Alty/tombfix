@@ -1,16 +1,16 @@
 /**
-	tombfix.service.extractors.feedeen.js
+	* tombfix.service.extractors.feedeen - PatchFor Tombfix
+	* Feedeen上でTombfixを使えるようにするTombfix用パッチ
 	
-	* Feedeen用
-	* 参考：Tombloo/31_Tombloo.Service.extractors.js、GoogleReader部分
+	* 参考：Tombloo/chrome/content/library/31_Tombloo.Service.extractors.js、GoogleReader部分
 	* @version 0.01
 	* @date 2013-06-29
     * @author Alty <fujihisa@gmail.com>
-	* @license Same as Tombloo / Tomblfy
+	* @license Same as Tombloo, Tomblfy
 */
 
+// Feedeen記事取得用
 (function(undefined) {
-	// Feedeen記事取得用
 	Tombfix.Service.extractors.register(
 	{
 		name : 'Feedeen',
@@ -18,15 +18,16 @@
 			if(!ctx.href.match('//feedeen.com/d')) {
 				return;
 			}
-
 			if(ctx.inFrame) { // クリック先がiframe内の場合
 				var ifr_parent = ctx.target.ownerDocument.defaultView.parent;
+				// ↓対象記事のstyleが空であることに依存してるので要改善
 				var item = ifr_parent.document.querySelectorAll("div[style=''] > div");
 			} else {
 				var item = ctx.document.querySelectorAll("div[style=''] > div");
 			}
 
 			if(item) {
+				// ↓クエリ探索で引っかかる順に依存してるので要改善
 				var res = {
 					author : item[1].textContent.replace(/from/, ''),
 					title  : item[0].textContent,
@@ -100,7 +101,6 @@
 			return exts.check(ctx)[0].extract(ctx);
 		},
 	}, 'Photo', false);
-
 
 	// Feedeen Link用
 	Tombfix.Service.extractors.register(
