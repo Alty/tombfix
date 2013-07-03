@@ -12,3 +12,6 @@ Firefox用アドオン[Tombfix](https://github.com/tombfix/core "Tombfix")のパ
 
     * [Tombfix](https://github.com/tombfix/core "Tombfix")をフィードリーダー「[Feedeen](http://feedeen.com "Feedeen")」に対応させるパッチです。
     * Googleリーダー上でTombfix(Tombloo)が出来たことがそのままできます。
+	* サンプル画像：
+		*  ![キャプチャ画像](https://raw.github.com/Alty/tombfix/master/feedeen_tombfix.jpg)
+		
