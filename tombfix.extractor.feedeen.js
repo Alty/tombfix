@@ -15,7 +15,7 @@
 	{
 		name : 'Feedeen',
 		getItem : function(ctx, getOnly) {
-			if(!ctx.href.match('//feedeen.com/d')) {
+			if(!ctx.href.match(/\/\/(?:www\.)feedeen.com\/d/)) {
 				return;
 			}
 			if(ctx.inFrame) { // クリック先がiframe内の場合
@@ -52,7 +52,7 @@
 	Tombfix.Service.extractors.register(
 	{
 		name : 'Quote - Feedeen' ,
-		ICON : 'http://feedeen.com/favicon.ico' ,
+		ICON : 'https://www.feedeen.com/favicon.ico' ,
 		check: function(ctx) {
 			return Tombfix.Service.extractors.Feedeen.getItem(ctx, true) && ctx.selection;
 		},
@@ -68,7 +68,7 @@
 	Tombfix.Service.extractors.register(
 	{
 		name: 'ReBlog - Feedeen' ,
-		ICON: 'http://feedeen.com/favicon.ico' ,
+		ICON: 'https://www.feedeen.com/favicon.ico' ,
 		check: function(ctx) {
 			var item = Tombfix.Service.extractors.Feedeen.getItem(ctx, true);
 			return item && (
@@ -87,7 +87,7 @@
 	Tombfix.Service.extractors.register(
 	{
 		name : 'Photo - Feedeen',
-		ICON : 'http://feedeen.com/favicon.ico',
+		ICON : 'https://www.feedeen.com/favicon.ico',
 		check : function(ctx){
 			return Tombfix.Service.extractors.Feedeen.getItem(ctx, true) &&
 				ctx.onImage;
@@ -103,7 +103,7 @@
 	Tombfix.Service.extractors.register(
 	{
 		name : 'Link - Feedeen',
-		ICON : 'http://feedeen.com/favicon.ico',
+		ICON : 'https://www.feedeen.com/favicon.ico',
 		check : function(ctx){
 			return Tombfix.Service.extractors.Feedeen.getItem(ctx, true)
 		},
